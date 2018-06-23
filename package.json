@@ -1,0 +1,11 @@
+{
+  "name": "add-or-extend",
+  "version": "1.0.0",
+  "description": "Add to array or extend an object",
+  "main": "add-or-extend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Savastano <mikesavastano@gmail.com>",
+  "license": "ISC"
+}
