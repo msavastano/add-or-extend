@@ -36,3 +36,18 @@ var after = addOrExtend(targetObject, key, sourceObject);
 console.log(after);
 //  { theKey: [ 'hello', 'world', { any: 'thing' } ], anotherKey: { any: 'thing' } }
 ```
+
+```
+var targetObject = {
+  theKey: {
+    hello: 'world'
+  }
+};
+var sourceObject = {
+    any: 'thing'
+}
+var key = 'theKey';
+var after = addOrExtend(targetObject, key, sourceObject);
+console.log(after);
+//{ theKey: { hello: 'world', any: 'thing' } }
+```

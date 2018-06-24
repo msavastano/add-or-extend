@@ -6,6 +6,9 @@
   "scripts": {
     "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --recursive --reporter mocha-multi --reporter-options spec=-,xunit=test-reports/unit.xml,doc=test-reports/unit.html ./test/unit --exit"
   },
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/msavastano/add-or-extend.git"

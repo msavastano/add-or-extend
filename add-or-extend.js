@@ -7,7 +7,11 @@ module.exports = function(targetObject, key, sourceObject) {
   };
 
   if(targetObject[key]) {
-    targetObject[key].push(sourceObject);
+    if(Array.isArray(targetObject[key])){
+      targetObject[key].push(sourceObject);
+    } else {
+      _.extend(targetObject[key], sourceObject);
+    }
   } else {
     var newOb = {}
     newOb[key] = sourceObject;
