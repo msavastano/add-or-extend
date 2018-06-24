@@ -1,14 +1,24 @@
 {
   "name": "add-or-extend",
-  "version": "1.0.0-rc",
+  "version": "1.0.0",
   "description": "Add to array or extend an object",
   "main": "add-or-extend.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --recursive --reporter mocha-multi --reporter-options spec=-,xunit=test-reports/unit.xml,doc=test-reports/unit.html ./test/unit --exit"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/msavastano/add-or-extend.git"
   },
-  "author": "Mike Savastano <mikesavastano@gmail.com>"
+  "author": "Mike Savastano <mikesavastano@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "mocha-multi": "^1.0.1"
+  }
 }
