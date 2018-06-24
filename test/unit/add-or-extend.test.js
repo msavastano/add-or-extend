@@ -1,7 +1,6 @@
 var addOrExtend = require('../../add-or-extend');
 var chai = require('chai');
 var expect = chai.expect;
-var should = chai.should();
 
 var targetObject = {
   theKey: [
