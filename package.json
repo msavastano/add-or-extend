@@ -1,6 +1,6 @@
 {
   "name": "add-or-extend",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Add to array or extend an object",
   "main": "add-or-extend.js",
   "scripts": {
