@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
     - initial release
 
 
-[Unreleased]: https://github.com/msavastano/add-or-extend/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/msavastano/add-or-extend/compare/v1.1.0...HEAD
 [1.1.0]: https://github.com/msavastano/add-or-extend/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/msavastano/add-or-extend/compare/v1.0.0-rc...v1.0.0
 [1.0.0-rc]: https://github.com/msavastano/add-or-extend/tree/v1.0.0-rc
