@@ -5,16 +5,13 @@ module.exports = function(targetObject, key, sourceObject, multipleSourceobjects
   if (arguments.length < 3) {
     throw(new Error('targetObject, key, sourceObject required'));
   };
-  var keyExiststObject;
-  var keyDoesNotExistObject;
-  if (multipleSourceobjects && Array.isArray(sourceObject) && sourceObject.length == 2) {
-    keyExiststObject = sourceObject[0];
-    keyDoesNotExistObject = sourceObject[1];
-  } else {
-    keyExiststObject = sourceObject;
-    keyDoesNotExistObject = sourceObject;
-  }
-
+  
+  var multiSource = multipleSourceobjects === true && Array.isArray(sourceObject) && sourceObject.length == 2
+ 
+  var keyExiststObject = multiSource ? sourceObject[0] : sourceObject;
+   
+  var keyDoesNotExistObject = multiSource ? sourceObject[1] : sourceObject;
+ 
   if(targetObject[key]) {
     if(Array.isArray(targetObject[key])){
       targetObject[key].push(keyExiststObject);
