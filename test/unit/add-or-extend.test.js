@@ -45,4 +45,37 @@ describe('add and extend objects', function () {
     expect(after.theKey).to.property('hello');
     done();
   });
+
+  it('if multiple source objects and has key, add the object[0] to key', function(done){
+    var targetObject = {
+      theKey: {
+        hello: 'world'
+      }
+    };
+    var sourceObject = [
+      { keyExists: 'addThis'},
+      {keyDoesNot: { add: 'that'}}
+    ]
+    var after = addOrExtend(targetObject, 'theKey', sourceObject, true);
+    expect(after).to.have.property('theKey');
+    expect(after.theKey).to.property('keyExists');
+    done();
+  });
+
+  it('if multiple source objects and does not have key, extend with object[1]', function(done){
+    var targetObject = {
+      theKey: {
+        hello: 'world'
+      }
+    };
+    var sourceObject = [
+      { keyExists: 'addThis'},
+      {keyDoesNot: { add: 'that'}}
+    ]
+    var after = addOrExtend(targetObject, 'notTheKey', sourceObject, true);
+    expect(after).to.have.property('notTheKey');
+    expect(after.notTheKey).to.property('keyDoesNot');
+    expect(after.notTheKey.keyDoesNot).to.property('add');
+    done();
+  });
 });
